@@ -63,4 +63,13 @@ public class MainProgram {
     	return result;
     }
     
+    public static float absolute_1816195 (float f) {
+    	float result = 0;
+    	if ( f >= 0 )
+    		result = f;
+    	else 
+    		result = -f;
+    	return result;
+    }
+    
 }
