@@ -54,4 +54,13 @@ public class MainProgram {
             System.out.println("To be developed...\n");
     }
     
+    public static int factorial_1816195 (int n) {
+    	int result = 1;
+    	
+    	for (int i=1; i<=n; i++) {
+    		result *= i;
+    	}
+    	return result;
+    }
+    
 }
