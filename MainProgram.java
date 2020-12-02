@@ -77,7 +77,42 @@ public class MainProgram {
         			System.out.println(factorial_1816913(n) + "\n");
         	}
         }
-        
+	else if(studentID == 1816526){
+		System.out.println("[Student ID: 1816526]");
+		System.out.println("1. Calculate Maximum");
+		System.out.println("2. Calculate Factorial");
+
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter menu number: ");
+		int menu = sc.nextInt();
+
+		if (menu == 1){
+			System.out.print("Enter your array size to calculate maximum");
+			int m = sc.nextInt();
+			if(m>10)
+				System.out.println("It's too long! Please enter positive array size less than 10!");
+			else if(m<=0)
+				System.out.println("It's too small! Please enter positive array size more than 0!");
+			else
+				System.out.println("Maximum value is " +max_1816526(m)+"\n");
+	
+		}
+		else if(menu == 2){
+			System.out.print("Enter a positive integer to calculate factorial: ");
+			int n = sc.nextInt();
+			if(n <0)
+				System.out.println("Please enter positive integer.");
+			else if(n > 100)
+				System.out.prinln("It's too big ! Please enter positive integer less than 100");
+			else
+				System.out.println(n+ "! is " +factorial_1816526(n)+ "\n");
+		}
+		else
+			System.out.println("You enter the wrong number. Please enter 1 or 2");
+
+		receiveStudentID();
+
+	}
         else
             System.out.println("To be developed...\n");
     }
@@ -117,6 +152,26 @@ public class MainProgram {
     	for (i=1; i<=n; i++)
     		answer *= i;
     	return answer;
+    }
+    public static int max_1816526(int m){
+    	Scanner scan = new Scanner(System.in);
+	int max = 0;
+	int[] num = new int[m];
+	for(int i = 0; i<m;i++){
+		System.out.print((i+1)+"번째 값을 입력하세요.");
+		num[i] = scan.nextInt();
+		if(i == 0) max = num[i];
+		else
+			max = max<num[i] ? num[i] : max;
+	}
+	return max;
+    }
+    public static int factorial_1816526(int n){
+	    int fact = 1;
+	    if(n == 0) return 0;
+	    for(int i = 0 ; i<=n; i++)
+		    fact *= i;
+	    return fact;
     }
     
 }
