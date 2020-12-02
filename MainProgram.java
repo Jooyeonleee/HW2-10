@@ -50,6 +50,34 @@ public class MainProgram {
         	}
         }
         
+        else if (studentID == 1816913) {
+        	System.out.println("[Student ID: 1816913]");
+        	System.out.println("1. Calculate Power");
+        	System.out.println("2. Calculate Factorial");
+        	
+        	Scanner sc = new Scanner(System.in);
+        	System.out.print("Enter menu number: ");
+        	int menu = sc.nextInt();
+        	
+        	if (menu == 1) {
+        		System.out.print("Enter two positive integers to calculate power: ");
+        		int n1 = sc.nextInt();
+        		int n2 = sc.nextInt();
+        		if (n1 <= 0 || n2 < 0) 
+            		System.out.println("Please enter positive integer. \n");
+        		else
+        			System.out.println(power_1816913(n1, n2) + "\n");
+        	}
+        	else if (menu == 2) {
+        		System.out.print("Enter a positive integer to calculate factorial: ");
+        		int n = sc.nextInt();
+        		if (n < 0)
+        			System.out.println("Please enter positive integer. \n");
+        		else 
+        			System.out.println(factorial_1816913(n) + "\n");
+        	}
+        }
+        
         else
             System.out.println("To be developed...\n");
     }
@@ -70,6 +98,25 @@ public class MainProgram {
     	else 
     		result = -f;
     	return result;
+    }
+    
+    public static int power_1816913 (int n1, int n2) {
+    	int answer = 1;
+    	int i;
+    	if (n2 == 0 ) return 1;
+    	for (i=1; i<=n2; i++) {
+    		answer *= n1;
+    	}
+    	return answer;
+    }
+    
+    public static int factorial_1816913 (int n) {
+    	int answer = 1;
+    	int i;
+    	if (n == 0) return 0;
+    	for (i=1; i<=n; i++)
+    		answer *= i;
+    	return answer;
     }
     
 }
