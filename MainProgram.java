@@ -52,7 +52,8 @@ public class MainProgram {
 
 	else if(studentID == 1815940) {
 		System.out.println("[Student ID: 1815940]\n");
-		System.out.println("1.Caculate Exponent Power\n");
+		System.out.println("1.Caculate Exponent Power");
+		System.out.println("2.Caculate Absolute\n");
 		Scanner input=new Scanner(System.in);
 		System.out.print("Enter menu number:");
 		int menu=input.nextInt();
@@ -79,7 +80,14 @@ public class MainProgram {
 				}
 
 			System.out.println("\nThe result of calculate "+a+"^"+b+" is "+ power_1815940(a,b) +"\n");
-
+		}
+		
+		else if(menu==2){
+			float a;
+			System.out.print("\nEnter the Real number:");
+			a=input.nextInt();
+					
+			System.out.println("\nThe result of calculate absolute "+a+" (|"+a+"|) is "+ absolute_1815940(a) +"\n");
 		}
 	}
 
@@ -112,6 +120,14 @@ public class MainProgram {
 		result=result*a;
 	return result;
 
+    }
+    
+    public static float absolute_1815940(float a){
+    	if(a>=0)
+    		a=a;
+    	else
+    		a=-a;
+    	return a;
     }
     
 
