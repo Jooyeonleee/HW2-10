@@ -92,7 +92,7 @@ public class MainProgram {
 			if(m>10)
 				System.out.println("It's too long! Please enter positive array size less than 10!");
 			else if(m<=0)
-				System.out.println("It's too small! Please enter positive array size more than 0!");
+				System.out.println("It's too small! Please enter positive array size more than 1!");
 			else
 				System.out.println("Maximum value is " +max_1816526(m)+"\n");
 	
@@ -158,7 +158,7 @@ public class MainProgram {
 	int max = 0;
 	int[] num = new int[m];
 	for(int i = 0; i<m;i++){
-		System.out.print((i+1)+"번째 값을 입력하세요.");
+		System.out.print("Enter an integer which will be in index "+(i+1));
 		num[i] = scan.nextInt();
 		if(i == 0) max = num[i];
 		else
@@ -168,7 +168,7 @@ public class MainProgram {
     }
     public static int factorial_1816526(int n){
 	    int fact = 1;
-	    if(n == 0) return 0;
+	    if(n == 0) return 1;
 	    for(int i = 0 ; i<=n; i++)
 		    fact *= i;
 	    return fact;
