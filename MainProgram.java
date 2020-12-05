@@ -54,11 +54,11 @@ public class MainProgram {
         	System.out.println("[Student ID: 1816913]");
         	System.out.println("1. Calculate Power");
         	System.out.println("2. Calculate Factorial");
-        	
+
         	Scanner sc = new Scanner(System.in);
         	System.out.print("Enter menu number: ");
         	int menu = sc.nextInt();
-        	
+
         	if (menu == 1) {
         		System.out.print("Enter two positive integers to calculate power: ");
         		int n1 = sc.nextInt();
@@ -76,6 +76,7 @@ public class MainProgram {
         		else 
         			System.out.println(factorial_1816913(n) + "\n");
         	}
+
         }
 	else if(studentID == 1816526){
 		System.out.println("[Student ID: 1816526]");
@@ -113,6 +114,52 @@ public class MainProgram {
 		receiveStudentID();
 
 	}
+
+        }    
+
+	else if(studentID == 1815940) {
+		System.out.println("[Student ID: 1815940]\n");
+		System.out.println("1.Caculate Exponent Power");
+		System.out.println("2.Caculate Absolute\n");
+		Scanner input=new Scanner(System.in);
+		System.out.print("Enter menu number:");
+		int menu=input.nextInt();
+		
+		if(menu==1){
+			int a,b;
+			System.out.print("\nEnter the base number (only positive integer):");
+			a=input.nextInt();
+			if(a<=0) {
+				while(true){	
+					System.out.print("Please Enter the positive number:");
+					a=input.nextInt();
+					if(a>0) break;
+				}
+				}
+			System.out.print("Enter the exponent number (only positive integer):");
+			b=input.nextInt();
+			if(b<=0) {
+				while(true){	
+					System.out.print("Please Enter the positive number:");
+					b=input.nextInt();
+					if(b>0) break;
+				}
+				}
+
+			System.out.println("\nThe result of calculate "+a+"^"+b+" is "+ power_1815940(a,b) +"\n");
+		}
+		
+		else if(menu==2){
+			float a;
+			System.out.print("\nEnter the Real number:");
+			a=input.nextInt();
+					
+			System.out.println("\nThe result of calculate absolute "+a+" (|"+a+"|) is "+ absolute_1815940(a) +"\n");
+		}
+	}
+
+		
+
         else
             System.out.println("To be developed...\n");
     }
@@ -144,7 +191,7 @@ public class MainProgram {
     	}
     	return answer;
     }
-    
+
     public static int factorial_1816913 (int n) {
     	int answer = 1;
     	int i;
@@ -173,5 +220,23 @@ public class MainProgram {
 		    fact *= i;
 	    return fact;
     }
+    
+    public static int power_1815940(int a, int b){
+	int result=1;
+	for(int i=1;i<=b;i++)
+		result=result*a;
+	return result;
+
+    }
+    
+    public static float absolute_1815940(float a){
+    	if(a>=0)
+    		a=a;
+    	else
+    		a=-a;
+    	return a;
+    }
+    
+
     
 }
