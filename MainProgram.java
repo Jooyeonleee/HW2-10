@@ -158,7 +158,7 @@ public class MainProgram {
 	int max = 0;
 	int[] num = new int[m];
 	for(int i = 0; i<m;i++){
-		System.out.print("Enter an integer which will be in index "+(i+1));
+		System.out.print("Enter an integer which will be in index "+(i+1)+" : ");
 		num[i] = scan.nextInt();
 		if(i == 0) max = num[i];
 		else
