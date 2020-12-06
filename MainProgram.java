@@ -104,7 +104,7 @@ public class MainProgram {
 			if(n <0)
 				System.out.println("Please enter positive integer.");
 			else if(n > 100)
-				System.out.prinln("It's too big ! Please enter positive integer less than 100");
+				System.out.println("It's too big ! Please enter positive integer less than 100");
 			else
 				System.out.println(n+ "! is " +factorial_1816526(n)+ "\n");
 		}
@@ -115,7 +115,7 @@ public class MainProgram {
 
 	}
 
-        }    
+            
 
 	else if(studentID == 1815940) {
 		System.out.println("[Student ID: 1815940]\n");
