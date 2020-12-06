@@ -160,8 +160,31 @@ public class MainProgram {
 
 		
 
-        else
+        else {
             System.out.println("To be developed...\n");
+        	if(studentID == 1816932){
+	        	System.out.println("[Student ID: 1816932]");
+	        	System.out.println("1. Calculate Absolute value");
+	        	System.out.println("2. Calculate Factorial value");
+	        	
+	        	Scanner sc = new Scanner(System.in);
+	        	System.out.print("Enter menu number: ");
+	        	int menu = sc.nextInt();
+	        	
+	        	switch (menu) {
+	      	   	case 1:
+	      		   System.out.print("Enter a number to replace with absolute value : ");
+	      		   int x = sc.nextInt();
+	      		   System.out.println("Absolut value : "+absolute_1816932(x));
+	      		   break;
+	      		   
+	      	   	case 2:
+	      		   System.out.print("Enter the number to get factorial value : ");
+	      		   int a = sc.nextInt();
+	      		   System.out.println("Result: "+factorial_1816932(a));
+	        	}
+	        }
+        }
     }
     
     public static int factorial_1816195 (int n) {
@@ -235,6 +258,21 @@ public class MainProgram {
     	else
     		a=-a;
     	return a;
+    }
+    
+    public static int factorial_1816932(int a) {
+    	int sum = 1;
+    	for(int i=2;i<=a;i++) {
+    		sum*=i;
+    	}
+    	return sum;
+    }
+    public int absolute_1816932(int a) {
+    	if(a>=0)
+    		return a;
+    	else
+    		return -a;
+    	
     }
     
 
