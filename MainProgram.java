@@ -87,14 +87,11 @@ public class MainProgram {
 		int menu = sc.nextInt();
 
 		if (menu == 1){
-			System.out.print("Enter your array size to calculate maximum");
-			int m = sc.nextInt();
-			if(m>10)
-				System.out.println("It's too long! Please enter positive array size less than 10!");
-			else if(m<=0)
-				System.out.println("It's too small! Please enter positive array size more than 1!");
-			else
-				System.out.println("Maximum value is " +max_1816526(m)+"\n");
+			System.out.print("Enter first integer to calculate maximum: ");
+			int a = sc.nextInt();
+			System.out.print("Enter second integer to calculate maximum: ");
+			int b = sc.nextInt();
+			System.out.println("Maximum value is " +max_1816526(a, b)+"\n");
 	
 		}
 		else if(menu == 2){
@@ -153,20 +150,12 @@ public class MainProgram {
     		answer *= i;
     	return answer;
     }
-    public static int max_1816526(int m){
-    	Scanner scan = new Scanner(System.in);
+    public int max_1816526(int a, int b){
 	int max = 0;
-	int[] num = new int[m];
-	for(int i = 0; i<m;i++){
-		System.out.print("Enter an integer which will be in index "+(i+1)+" : ");
-		num[i] = scan.nextInt();
-		if(i == 0) max = num[i];
-		else
-			max = max<num[i] ? num[i] : max;
-	}
+	max = a>b ? a : b;
 	return max;
     }
-    public static int factorial_1816526(int n){
+    public int factorial_1816526(int n){
 	    int fact = 1;
 	    if(n == 0) return 1;
 	    for(int i = 0 ; i<=n; i++)
