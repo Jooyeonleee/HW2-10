@@ -165,14 +165,14 @@ public class MainProgram {
             int menu = sc.nextInt();
         		
             if (menu == 1) {
-                System.out.println("Enter 3 integers to calculate max: ");
+                System.out.print("Enter 3 integers to calculate max: ");
                 int n1 = sc.nextInt();
                 int n2 = sc.nextInt();
                 int n3 = sc.nextInt();
                 System.out.println("The max of "+n1+", "+n2+", and "+n3+" is "+max_1816937(n1, n2, n3)+"\n");
             }
             else if (menu == 2) {
-                System.out.println("Enter a real number to calculate absolute value: ");
+                System.out.print("Enter a real number to calculate absolute value: ");
                 float f = sc.nextFloat();
                 System.out.println("The absolute value of "+f+" is "+absolute_1816937(f)+"\n");
             }
