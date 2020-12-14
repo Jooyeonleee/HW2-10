@@ -155,8 +155,31 @@ public class MainProgram {
 		}
 	}
 
+        else if (studentID == 1816937) {                                                  
+            System.out.println("[Student ID: 1816937]");
+            System.out.println("1. Calculate max");
+            System.out.println("2. Calculate absolute value");
+        	
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter menu number: ");
+            int menu = sc.nextInt();
+        		
+            if (menu == 1) {
+                System.out.println("Enter 3 integers to calculate max: ");
+                int n1 = sc.nextInt();
+                int n2 = sc.nextInt();
+                int n3 = sc.nextInt();
+                System.out.println("The max of "+n1+", "+n2+", and "+n3+" is "+max_1816937(n1, n2, n3)+"\n");
+            }
+            else if (menu == 2) {
+                System.out.println("Enter a real number to calculate absolute value: ");
+                float f = sc.nextFloat();
+                System.out.println("The absolute value of "+f+" is "+absolute_1816937(f)+"\n");
+            }
+            else
+                System.out.println("You made an incorrect selection. Please select 1 or 2.\n");
+        } 
 		
-
         else {
             System.out.println("To be developed...\n");
         	if(studentID == 1816932){
@@ -264,6 +287,18 @@ public class MainProgram {
     	
     }
     
-
+    public int max_1816937(int n1, int n2, int n3) {                    
+        int result = (n1 > n2) ? n1 : n2;
+        result = (result > n3) ? result : n3;
+        return result;
+    }
     
+    public float absolute_1816937(float f) {
+        float result = 0;
+        if (f >= 0)
+            result = f;
+        else
+            result = -f;
+        return result;
+    }
 }
